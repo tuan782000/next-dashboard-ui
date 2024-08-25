@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import Menu from "@/components/Menu";
+import Navbar from "@/components/Navbar";
 
 export default function DashboardLayout({
   children,
@@ -9,7 +11,7 @@ export default function DashboardLayout({
   return (
     <div className="h-screen flex">
       {/* LEFT */}
-      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] bg-red-50 p-4">
+      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4">
         <Link
           href="/"
           className="flex justify-center items-center gap-2 lg:justify-start"
@@ -17,10 +19,12 @@ export default function DashboardLayout({
           <Image src="/logo.png" alt="logo" width={32} height={32} />
           <span className="hidden lg:block">SchoolLama</span>
         </Link>
+        <Menu />
       </div>
       {/* RIGHT */}
-      <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-blue-50">
-        r
+      <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll">
+        <Navbar />
+        {children}
       </div>
     </div>
   );
@@ -70,4 +74,24 @@ lg:justify-start: đối với các màn hình lớn hơn lg >= 992px thì trụ
 
 
 hidden lg:block - mặc định là ẩn text đó - nhưng với màn hình >= 992px thì hiển thị chữ đó
+
+
+      <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll">
+
+      w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll: 
+
+      Chiều rộng 86%
+      với màn hình md 92%
+      với màn hình lg 84
+      với màn hình xl 86
+      màu sắc #F7F8FA
+      overflow-scroll - thanh scroll cuộn
+
+      Luôn luôn hiển thị thanh cuộn, bất kể nội dung có vượt quá kích thước phần tử hay không.
+
+      Kích hoạt chế độ cuộn (scroll) cho phần tử này. Nếu nội dung bên trong phần tử vượt quá kích thước của nó, thanh cuộn sẽ xuất hiện để người dùng có thể cuộn qua nội dung.
+
+  Navbar
+
+  children sẽ là nội dung được render
 */
