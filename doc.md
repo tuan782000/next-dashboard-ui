@@ -37,3 +37,7 @@ components - Mục đích: Chứa các thành phần UI (User Interface) có th�
 lib - Mục đích: Chứa các hàm tiện ích, logic xử lý độc lập, hoặc các thư viện riêng do bạn tự viết để sử dụng trong ứng dụng.
 
 - data.ts
+
+Dùng thư viện bigCalender thì phải
+
+Tải 3 thứ: thư viện gốc, types của nó và cả moment
