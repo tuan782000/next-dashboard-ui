@@ -41,3 +41,11 @@ lib - Mục đích: Chứa các hàm tiện ích, logic xử lý độc lập, h
 Dùng thư viện bigCalender thì phải
 
 Tải 3 thứ: thư viện gốc, types của nó và cả moment
+
+## Sử dụng React Hook Form và Zod
+
+react-hook-form và @hookform/resolvers
+
+zod
+
+đây là 3 thư viện cần phải cài trước khi sử dụng
